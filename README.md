@@ -1,4 +1,22 @@
-# Workstation Setup
+# Rise8 Workstation Setup
+## What is this?
+This is a setup script for Rise8 engineers. It installs many of the common tools used by engineers; among those can be found text editors, IDE's, shells, git setup, and other useful applications.
+
+This is also a fork off of the [Pivotal Workstation Setup scripts](https://github.com/pivotal/workstation-setup) with some minimial changes. We have removed the Google analyitics piece and added further comments to some of the scripts explaining what it is that each command does (which is still a work in progress). Other than that the script remains mostly the same.
+
+## Ok...but why?
+1. Uniformity among engineering tools and setup facilitates debugging, pairing, and communication
+2. Managing our own setup scripts allows for use to adapt the scripts to our own purposes and needs
+3. Although setup doesn't generally vary wildly, it's worth having a centralized repository to point new engineers towards during onboarding 
+
+As a tangental benefit, this repo can also be used to track Mac issues in a more robust way than is possible on the internal-it slack channel.
+
+## How?
+The readme information below is the original readme from the Pivotal script which can be used to run the script and will be maintained to this end.
+
+___
+
+## Workstation Setup
 
 This project automates the process of setting up a new Mac OS X software development machine using simple [Bash](https://www.gnu.org/software/bash/) scripting. It heavily relies on [homebrew](https://brew.sh/).
 
@@ -33,7 +51,7 @@ Open up `Terminal.app` and run the following command:
 ```sh
 mkdir -p ~/workspace &&
   cd ~/workspace &&
-  git clone https://github.com/pivotal/workstation-setup.git &&
+  git clone https://github.com/rise8-us/workstation-setup.git &&
   cd workstation-setup
 ```
 
@@ -76,18 +94,9 @@ To install any of these, add them as arguments to `$> setup.sh`. Examples:
 ./setup.sh golang docker kubernetes cloud-foundry terraform concourse
 ```
 
-## Analytics
-
-The tool will send anonymous user data to our Google Analytics account, so we can see what command line arguments are popular.  You can disable this:
-```
-# Remove unnecessary languages when running command
-SKIP_ANALYTICS=1 ./setup.sh java ruby node golang c docker
-```
-This will also disable brew's [data collection](https://github.com/Homebrew/brew/blob/master/docs/Analytics.md).
-
 ## Having problems?
 
-If you're having problems using the setup script, please let us know by [opening an issue](https://github.com/pivotal/workstation-setup/issues/new).
+If you're having problems using the setup script, please let us know by [opening an issue](https://github.com/rise8-us/workstation-setup/issues/new).
 
 If you see errors from `brew`, try running `brew doctor` and include the diagnostic output in your issue submission.
 
